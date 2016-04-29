@@ -7,8 +7,7 @@ var fs = require('fs')
 var memread = new Memcached(
 	'127.0.0.1:11211'
 )
-
-var memwrite = new Memcached(
+]var memwrite = new Memcached(
 	'127.0.0.1:11211'
 )
 
