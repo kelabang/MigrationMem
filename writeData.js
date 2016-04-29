@@ -23,8 +23,7 @@ function curryWriteData (data) {
 function writeDataToMem (v, cb) {
 	var _key = 'ifeed_' + v.stock_code
 	var _rawkey = md5(_key.toLowerCase())
-	var _data = JSON.stringify(v, null, 1)
-	console.log('start write ', _rawkey)
+	var _data = JSON.stringify(v)
 	wmem.set(_rawkey, _data, 0, function (err) {
 		console.log('done write ', _rawkey)
 		cb(err)
